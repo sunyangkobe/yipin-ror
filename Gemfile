@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.2.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -48,4 +49,6 @@ end
 # Enable features such as static asset serving and logging on Heroku 
 gem 'rails_12factor', group: :production
 
-ruby "2.2.4"
+# Puma web server
+gem 'puma'
+
