@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Interview Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>File name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interview_questions.each do |interview_question| %>
+      <tr>
+        <td><%= interview_question.question %></td>
+        <td><%= interview_question.file_name %></td>
+        <td><%= link_to 'Show', interview_question %></td>
+        <td><%= link_to 'Edit', edit_interview_question_path(interview_question) %></td>
+        <td><%= link_to 'Destroy', interview_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interview question', new_interview_question_path %>

@@ -1,0 +1,18 @@
+<%= javascript_include_tag "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @interview_question.question %>
+</p>
+
+<p>
+  <strong>File name:</strong>
+  <%= @interview_question.file_name %>
+</p>
+
+<pre class="prettyprint"><%= @data %></pre>
+
+<%= link_to 'Edit', edit_interview_question_path(@interview_question) %> |
+<%= link_to 'Back', interview_questions_path %>
